@@ -159,7 +159,7 @@ export default function Footer() {
           </p>
 
           <p className='text-gray-500 text-sm'>
-            Designed for Modern Security Solutions
+            Designed by SarvX Tech 
           </p>
 
         </div>
