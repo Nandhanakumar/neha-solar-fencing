@@ -304,78 +304,104 @@ export default function Enquiry() {
                 Send Your Specification
               </h2>
 
-              <form className='space-y-6'>
+     <form
+  action="https://formsubmit.co/nagarajneha90@gmail.com"
+  method="POST"
+  className="space-y-6"
+>
 
-                <div>
-                  <label className='block mb-2 font-medium text-xs uppercase tracking-widest text-zinc-400'>
-                    Your Name
-                  </label>
+  {/* FormSubmit settings */}
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_subject" value="New Enquiry - NEHA Solar Fencing Website" />
 
-                  <input
-                    type='text'
-                    placeholder='Enter legal or corporate identity name'
-                    className='w-full bg-zinc-900/50 border border-white/5 rounded-2xl p-4 text-white text-sm placeholder:text-zinc-600 outline-none focus:border-emerald-500/50'
-                  />
-                </div>
+  {/* Name */}
+  <div>
+    <label className='block mb-2 font-medium text-xs uppercase tracking-widest text-zinc-400'>
+      Your Name
+    </label>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+    <input
+      type='text'
+      name="name"
+      required
+      placeholder='Enter legal or corporate identity name'
+      className='w-full bg-zinc-900/50 border border-white/5 rounded-2xl p-4 text-white text-sm placeholder:text-zinc-600 outline-none focus:border-emerald-500/50'
+    />
+  </div>
 
-                  <div>
-                    <label className='block mb-2 font-medium text-xs uppercase tracking-widest text-zinc-400'>
-                      Phone Number
-                    </label>
+  {/* Phone + Email */}
+  <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
 
-                    <input
-                      type='tel'
-                      placeholder='Mobile contact number'
-                      className='w-full bg-zinc-900/50 border border-white/5 rounded-2xl p-4 text-white text-sm placeholder:text-zinc-600 outline-none focus:border-emerald-500/50'
-                    />
-                  </div>
+    <div>
+      <label className='block mb-2 font-medium text-xs uppercase tracking-widest text-zinc-400'>
+        Phone Number
+      </label>
 
-                  <div>
-                    <label className='block mb-2 font-medium text-xs uppercase tracking-widest text-zinc-400'>
-                      Email Address
-                    </label>
+      <input
+        type='tel'
+        name="phone"
+        required
+        placeholder='Mobile contact number'
+        className='w-full bg-zinc-900/50 border border-white/5 rounded-2xl p-4 text-white text-sm placeholder:text-zinc-600 outline-none focus:border-emerald-500/50'
+      />
+    </div>
 
-                    <input
-                      type='email'
-                      placeholder='name@domain.com'
-                      className='w-full bg-zinc-900/50 border border-white/5 rounded-2xl p-4 text-white text-sm placeholder:text-zinc-600 outline-none focus:border-emerald-500/50'
-                    />
-                  </div>
+    <div>
+      <label className='block mb-2 font-medium text-xs uppercase tracking-widest text-zinc-400'>
+        Email Address
+      </label>
 
-                </div>
+      <input
+        type='email'
+        name="email"
+        required
+        placeholder='name@domain.com'
+        className='w-full bg-zinc-900/50 border border-white/5 rounded-2xl p-4 text-white text-sm placeholder:text-zinc-600 outline-none focus:border-emerald-500/50'
+      />
+    </div>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+  </div>
 
-                  <select className='w-full bg-zinc-900/50 border border-white/5 rounded-2xl p-4 text-zinc-300 text-sm outline-none focus:border-emerald-500/50'>
-                    <option>Solar Power Fence</option>
-                    <option>Chain Link Fencing</option>
-                    <option>Readymade Compound Wall</option>
-                  </select>
+  {/* Selects */}
+  <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
 
-                  <select className='w-full bg-zinc-900/50 border border-white/5 rounded-2xl p-4 text-zinc-300 text-sm outline-none focus:border-emerald-500/50'>
-                    <option>Agricultural Farm Land</option>
-                    <option>Industrial Property</option>
-                    <option>Residential Estate</option>
-                  </select>
+    <select
+      name="service"
+      className='w-full bg-zinc-900/50 border border-white/5 rounded-2xl p-4 text-zinc-300 text-sm outline-none focus:border-emerald-500/50'
+    >
+      <option>Solar Power Fence</option>
+      <option>Chain Link Fencing</option>
+      <option>Readymade Compound Wall</option>
+    </select>
 
-                </div>
+    <select
+      name="property"
+      className='w-full bg-zinc-900/50 border border-white/5 rounded-2xl p-4 text-zinc-300 text-sm outline-none focus:border-emerald-500/50'
+    >
+      <option>Agricultural Farm Land</option>
+      <option>Industrial Property</option>
+      <option>Residential Estate</option>
+    </select>
 
-                <textarea
-                  rows='5'
-                  placeholder='Describe your project details...'
-                  className='w-full bg-zinc-900/50 border border-white/5 rounded-2xl p-4 text-white text-sm placeholder:text-zinc-600 outline-none resize-none focus:border-emerald-500/50'
-                />
+  </div>
 
-                <button
-                  type='button'
-                  className='w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 transition-all duration-300 text-white py-4 rounded-2xl text-sm sm:text-base font-semibold uppercase'
-                >
-                  Submit Enquiry →
-                </button>
+  {/* Message */}
+  <textarea
+    name="message"
+    rows="5"
+    placeholder='Describe your project details...'
+    className='w-full bg-zinc-900/50 border border-white/5 rounded-2xl p-4 text-white text-sm placeholder:text-zinc-600 outline-none resize-none focus:border-emerald-500/50'
+  />
 
-              </form>
+  {/* Submit */}
+  <button
+    type="submit"
+    className='w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 transition-all duration-300 text-white py-4 rounded-2xl text-sm sm:text-base font-semibold uppercase'
+  >
+    Submit Enquiry →
+  </button>
+
+</form>
 
             </div>
 

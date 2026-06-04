@@ -8,7 +8,7 @@ export default function Testimonials() {
       product: 'Solar Fencing System',
       date: '2026-01-09',
       displayDate: '09-Jan-2026',
-      review: 'Professional installation and excellent fencing quality.',
+      review: 'The installation was carried out in a highly professional manner with great attention to detail. The team ensured timely execution, clean workmanship, and strong structural quality.',
       rating: 5,
     },
     {
@@ -17,7 +17,7 @@ export default function Testimonials() {
       product: 'Solar Fencing System',
       date: '2026-01-09',
       displayDate: '09-Jan-2026',
-      review: 'Quick response and neat installation work.',
+      review: 'The team provided a quick response and completed the installation work with great efficiency. The work was done neatly, with proper attention to detail and cleanliness.',
       rating: 5,
     },
     {
@@ -26,7 +26,7 @@ export default function Testimonials() {
       product: 'Fencing Services',
       date: '2026-01-09',
       displayDate: '09-Jan-2026',
-      review: 'Affordable pricing with great service quality.',
+      review: 'The pricing was very affordable while still maintaining excellent service quality. The team delivered a cost-effective solution without compromising on workmanship or materials, ensuring great overall value for money.',
       rating: 5,
     },
     {
@@ -35,7 +35,7 @@ export default function Testimonials() {
       product: 'Solar Fencing System',
       date: '2026-01-09',
       displayDate: '09-Jan-2026',
-      review: 'Reliable fencing system and friendly support team.',
+      review: 'The fencing system is highly reliable, built with strong quality standards and durable materials. The support team is friendly, responsive, and ensures smooth communication throughout the process, making the overall experience hassle-free and trustworthy.',
       rating: 5,
     },
     {
@@ -44,7 +44,7 @@ export default function Testimonials() {
       product: 'Solar Fence',
       date: '2024-02-22',
       displayDate: '22-Feb-2024',
-      review: 'Smooth installation and professional technicians.',
+      review: 'The installation process was smooth and efficiently handled by a team of professional technicians. They ensured precise execution, attention to detail, and a clean finish, resulting in a high-quality and reliable fencing setup.',
       rating: 5,
     },
     {
@@ -53,7 +53,7 @@ export default function Testimonials() {
       product: 'Solar Fence',
       date: '2023-03-11',
       displayDate: '11-Mar-2023',
-      review: 'Strong fencing setup with very low maintenance.',
+      review: 'The fencing system is strong, durable, and built for long-term reliability with very low maintenance requirements. It is designed to withstand harsh conditions while maintaining structural integrity, making it a cost-effective and dependable solution.',
       rating: 5,
     },
   ]
@@ -121,7 +121,11 @@ export default function Testimonials() {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className='group relative bg-slate-900/30 backdrop-blur-xl border border-white/5 rounded-3xl p-8 overflow-hidden transition-all duration-700 hover:border-emerald-500/30 hover:shadow-[0_20px_60px_rgba(16,185,129,0.08)]'
+              className='group relative bg-slate-900/30 backdrop-blur-xl border border-white/5 rounded-3xl p-8 overflow-hidden transition-all duration-300 ease-out
+hover:-translate-y-2
+hover:border-emerald-400/40
+hover:shadow-[0_25px_70px_rgba(16,185,129,0.12)]
+active:scale-[0.98]'
             >
               {/* Radial Top Glow Transition Mesh */}
               <div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent pointer-events-none'></div>

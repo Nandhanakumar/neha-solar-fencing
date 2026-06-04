@@ -80,31 +80,40 @@ export default function WhyChoose() {
           </div>
 
           {/* Cards Display Grid */}
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-20'>
+           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-20'>
+
             {features.map((item, index) => (
               <div
                 key={index}
-                className='group relative bg-zinc-950/40 backdrop-blur-md border border-white/5 rounded-2xl p-8 transition-all duration-300 ease-out hover:-translate-y-2 hover:border-emerald-500/20 hover:bg-zinc-900/60 hover:shadow-[0_30px_50px_-20px_rgba(0,0,0,0.8)]'
-              >
-                {/* Micro-glow surface sheen */}
-                <div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-b from-white/[0.01] to-transparent pointer-events-none rounded-2xl' />
+                className='group relative bg-zinc-950/40 backdrop-blur-md border border-white/5 rounded-2xl p-8 transition-all duration-300 ease-out
 
-                {/* Neutral Modern Icon Container */}
-                <div className='w-12 h-12 rounded-xl bg-zinc-900/80 border border-white/5 flex items-center justify-center mb-6 transition-all duration-300 group-hover:border-emerald-500/20 group-hover:bg-emerald-950/20 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.1)]'>
+                hover:-translate-y-2
+                hover:scale-[1.02]
+                hover:border-emerald-400/30
+                hover:bg-zinc-900/70
+                hover:shadow-[0_20px_60px_rgba(16,185,129,0.15)]
+
+                active:scale-[0.98]
+              '
+              >
+
+                <div className='w-12 h-12 rounded-xl bg-zinc-900/80 border border-white/5 flex items-center justify-center mb-6 transition-all duration-300 group-hover:border-emerald-500/20 group-hover:bg-emerald-950/20'>
                   {item.icon}
                 </div>
 
-                {/* Card Context */}
-                <h3 className='text-lg font-semibold text-white mb-3 tracking-tight transition duration-300 group-hover:text-emerald-300'>
+                <h3 className='text-lg font-semibold text-white mb-3 transition group-hover:text-emerald-300'>
                   {item.title}
                 </h3>
 
-                <p className='text-zinc-400 text-sm leading-relaxed font-light transition duration-300 group-hover:text-zinc-300'>
+                <p className='text-zinc-400 text-sm leading-relaxed transition group-hover:text-zinc-300'>
                   {item.desc}
                 </p>
+
               </div>
             ))}
+
           </div>
+
 
         </div>
       </section>
